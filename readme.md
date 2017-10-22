@@ -4,4 +4,7 @@ Tools included
 - ruby/rake
 - kubectl
 - docker
+- cf
+
+
 

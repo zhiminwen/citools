@@ -6,6 +6,9 @@ RUN apk add --update ca-certificates curl tar && \
 	tar zxf docker-17.06.0-ce.tgz -C /usr/local/bin --strip-components 1 && \
 	rm -rf docker-17.06.0-ce.tgz && \
 	gem install dotenv sshkit_addon && \
+	cd /tmp && \
+	curl -L "https://cli.run.pivotal.io/stable?release=linux64-binary&source=github" | tar -zx && \
+	mv cf /usr/local/bin && \
 	rm -rf /var/cache/apk/*
 
 CMD ["sh"]
